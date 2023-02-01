@@ -1,0 +1,52 @@
+body {
+	background-color: lightblue;
+}
+
+.container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.box {
+	height: 500px;
+  	width: 410px;
+  	padding: 10px 5px;
+}
+
+.box-inner {
+	position: relative;
+	height: 500px;
+	width: 400px;
+	background-color: white;
+	text-align: center;
+	transition: transform 1s;
+	transform-style: preserve-3d;
+}
+
+.box-inner:hover {
+	transform: rotateY(180deg);
+}
+
+.inner-front {
+	position: absolute;
+	top: 25px;
+	left: 25px;
+	backface-visibility: hidden;   
+}
+
+.inner-back {
+	position: absolute;
+	top: 25px;
+	right: 25px;
+	backface-visibility: hidden;   
+}
+
+.inner-back {
+	transform: rotateY(180deg);
+}
+
+
+.inner-back p {
+	display: block;
+}
+

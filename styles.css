@@ -7,13 +7,33 @@ body {
 	flex-wrap: wrap;
 }
 
-.box {
-	height: 500px;
-  	width: 410px;
-  	padding: 10px 5px;
+.filter {
+	height: 40px;
 }
 
-.box-inner {
+.tags {
+	margin: auto;
+	background-color: white;
+	width: 30%;
+	padding: 10px;
+}
+
+.tags.show {
+	display: none;
+}
+
+#submit-button {
+	float: right;
+	margin-right:10px;
+}
+
+.filter button {
+	float: right;
+    margin-right:50px;
+}
+
+.box {
+	margin: 10px 10px;
 	position: relative;
 	height: 500px;
 	width: 400px;
@@ -23,30 +43,31 @@ body {
 	transform-style: preserve-3d;
 }
 
-.box-inner:hover {
+.box.flipped {
 	transform: rotateY(180deg);
 }
 
-.inner-front {
+.front, .back {
 	position: absolute;
 	top: 25px;
-	left: 25px;
 	backface-visibility: hidden;   
 }
 
-.inner-back {
-	position: absolute;
-	top: 25px;
-	right: 25px;
-	backface-visibility: hidden;   
+img {
+	height: 350px;
+	width: 350px;
 }
 
-.inner-back {
+.front {
+	left: 25px;  
+}
+
+.back {
+	right: 25px; 
 	transform: rotateY(180deg);
 }
 
-
-.inner-back p {
+.back p {
 	display: block;
 }
 

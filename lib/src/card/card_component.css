@@ -1,0 +1,28 @@
+:host {
+    display: flex;
+	flex-wrap: wrap;
+    
+    .box {
+        margin: 10px 10px;
+        position: relative;
+        height: 500px;
+        width: 400px;
+        background-color: white;
+        text-align: center;
+    }
+
+    .front, .back {
+        position: absolute;
+        top: 25px;   
+        left: 25px;
+    }
+    
+    .pic {
+        height: 350px;
+        width: 350px;
+    }
+    
+    .back p {
+        display: block;
+    }
+}

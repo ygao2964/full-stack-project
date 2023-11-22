@@ -1,0 +1,7 @@
+<div>
+    <div *ngFor="let tag of tags">
+        <input type="checkbox" id="tag.name" value="isHealthy" name="tag.name" [(ngModel)]="tag.checked">
+        <label for="tag.name"> {{tag.des}} </label>
+    </div>
+    <button id="submit-button" (click)="getCheckedTags()">Submit</button>
+</div>

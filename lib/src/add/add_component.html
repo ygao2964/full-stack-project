@@ -1,0 +1,18 @@
+<div>
+    <h1>Add new picture:</h1>
+    <div>
+        <input type="text" id="src" name="src" [(ngModel)]="picture.src" required>
+        <label for="src"></label>
+        <input type="text" id="alt" name="alt" [(ngModel)]="picture.alt" required>
+        <label for="alt"></label>
+        <input type="text" id="des" name="des" [(ngModel)]="picture.des" required>
+        <label for="des"></label>
+        <div>
+            <select id="tags" name="tags" required>
+                <option *ngFor="let tag of tags" [value]="tag.des">{{tag.des}}</option>
+            </select>
+            <label for="tags"></label>
+        </div>
+    </div>
+    <button id="add-button" (click)="addPicture()">Add</button>
+</div>

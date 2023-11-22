@@ -1,0 +1,23 @@
+<div>
+
+	<head>
+		<title>Food</title>
+	</head>
+
+	<body>
+		<div>
+			<h1>Food cards</h1>
+			<p>I love eating.</p>
+		</div>
+		<div class="filter">
+			<button id="filter-button" (click)="showOrHideForm()">Filter</button>
+			<button id="add-button" (click)="showAdd()">Add Picture</button>
+			<add-form *ngIf="show" [ngFormControl]="addPictureControl"></add-form>
+			<filter-form class="tags show" *ngIf="shouldHide" [ngFormControl]="tagsControl" [tags]="tags">
+			</filter-form>
+		</div>
+		<div class="container">
+			<card *ngFor="let picture of filteredPictureList" [picture]="picture"></card>
+		</div>
+	</body>
+</div>

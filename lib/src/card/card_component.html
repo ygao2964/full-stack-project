@@ -1,0 +1,8 @@
+<div class="box" (click)="onClick">
+    <div class="front" *ngIf="!flipped">
+        <img class="pic" [src]="picture.src" [alt]="picture.alt">
+    </div>
+    <div class="back" *ngIf="flipped">
+        <p>{{picture.des}}</p>
+    </div>
+</div>

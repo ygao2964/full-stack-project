@@ -1,0 +1,6 @@
+:host {
+    .filter button {
+        float: right;
+        margin-right:50px;
+    }
+}
